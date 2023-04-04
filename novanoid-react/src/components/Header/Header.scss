@@ -1,0 +1,49 @@
+header {
+  width: 100%;
+  .header-container {
+    background: url(http://demo.rommar.in.ua/novanoid/novanoid-1/img/header-1.jpg) no-repeat;
+    background-position: top;
+
+    border: 1px solid black;
+    height: 600px;
+    width: 100%;
+
+    text-align: center;
+    h1 {
+      position: relative;
+      margin-top: 300px;
+
+      color: aliceblue;
+      font-size: 50px;
+      font-weight: 400;
+      /* transition: all 0.1s ease; */
+    }
+    #novanoid {
+      display: none;
+      transition: all 0.6s ease;
+    }
+    #minimalism {
+      display: none;
+      transition: all 0.6s ease;
+    }
+    #creative {
+      display: none;
+      transition: all 0.6s ease;
+    }
+    span {
+      color: aliceblue;
+    }
+    .dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 150px 2px;
+      background-color: rgba(255, 255, 255, 0);
+
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      border: 1px solid white;
+    }
+  }
+}

@@ -1,13 +1,182 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Yanone Kaffeesatz Regular', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+}
+
+h1 {
+  letter-spacing: 0.05rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.dot-active {
+  background-color: rgba(255, 255, 255) !important;
+}
+.display-show {
+  display: block !important;
+}
+.work-image-filter {
+  animation: fadeout;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.work-image-unfilter {
+  animation: fade, zoomin;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.fade-in-fully {
+  animation: fadeinfully;
+  animation-duration: 0.5s;
+}
+.fade-out-fully {
+  animation: fadeoutfully;
+  animation-duration: 0.5s;
+}
+.fade-in-09 {
+  animation: fadein09;
+  animation-duration: 0.5s;
+}
+.fade-out-09 {
+  animation: fadeout09;
+  animation-duration: 0.5s;
+}
+.text-in-fully {
+  animation: fadeinfully;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+.box-in-fully {
+  animation: fadeinfully;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.zoomout {
+  animation: zoomout;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.work-animation-filter {
+  animation: fadeout, zoomout;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes zoomout {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(0.7, 0.7);
+  }
+}
+@keyframes zoomin {
+  from {
+    transform: scale(0.7, 0.7);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+@keyframes fadeinfully {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeoutfully {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+@keyframes fadein09 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+@keyframes fadeout09 {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes navmove {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 237px;
+  }
+}
+@keyframes navremove {
+  from {
+    height: 237px;
+  }
+  to {
+    height: 0px;
+  }
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz Bold';
+  src: local('YanoneKaffeesatz'), url('./fonts/YanoneKaffeesatz-Bold.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz ExtraLight';
+  src: local('YanoneKaffeesatz'), url('./fonts/YanoneKaffeesatz-ExtraLight.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz Light';
+  src: local('YanoneKaffeesatz'), url('./fonts/YanoneKaffeesatz-Light.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz Medium';
+  src: local('YanoneKaffeesatz'), url('./fonts/YanoneKaffeesatz-Medium.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz Regular';
+  src: local('YanoneKaffeesatz'), url('./fonts/YanoneKaffeesatz-Regular.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz SemiBold';
+  src: local('YanoneKaffeesatz'), url('./fonts/YanoneKaffeesatz-SemiBold.ttf') format('TrueType');
 }
