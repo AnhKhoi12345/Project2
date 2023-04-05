@@ -1,6 +1,7 @@
 import './Header.scss';
 import Navbar from '../Navbar';
 function Header() {
+  let slideIndex = 0;
   function dotOne() {
     var nova = document.getElementById('novanoid');
     var mini = document.getElementById('minimalism');
@@ -11,6 +12,7 @@ function Header() {
     document.getElementById('dot-1').classList.add('dot-active');
     document.getElementById('dot-2').classList.remove('dot-active');
     document.getElementById('dot-3').classList.remove('dot-active');
+    slideIndex = 0;
   }
 
   function dotTwo() {
@@ -23,6 +25,7 @@ function Header() {
     document.getElementById('dot-1').classList.remove('dot-active');
     document.getElementById('dot-2').classList.add('dot-active');
     document.getElementById('dot-3').classList.remove('dot-active');
+    slideIndex = 1;
   }
 
   function dotThree() {
@@ -35,9 +38,9 @@ function Header() {
     document.getElementById('dot-1').classList.remove('dot-active');
     document.getElementById('dot-2').classList.remove('dot-active');
     document.getElementById('dot-3').classList.add('dot-active');
+    slideIndex = 2;
   }
 
-  let slideIndex = 0;
   function titleAutoChange() {
     if (slideIndex === 0) {
       dotOne();

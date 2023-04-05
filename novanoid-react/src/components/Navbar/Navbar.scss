@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  border: 1px solid yellow;
+  // border: 1px solid yellow;
   //   background-color: red;
   //   #navbar-toggle {
   //     height: 20px;
@@ -92,4 +92,16 @@
   to {
     opacity: 1;
   }
+}
+.fix-navbar {
+  position: fixed !important;
+  // height: 900px;
+  z-index: 2;
+}
+
+.navBtnGray {
+  color: var(--darker-blueish-gray) !important;
+}
+.white-navbar {
+  background-color: white !important;
 }

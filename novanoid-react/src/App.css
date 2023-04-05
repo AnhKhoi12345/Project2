@@ -3,11 +3,14 @@
   width: 90%;
   height: auto;
   padding-bottom: 50px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-wrap: wrap;
 }
 .App {
   background-color: var(--darker-blueish-gray);
   padding-top: 50px;
+}
+.noPadBody {
+  padding-top: 0 !important;
 }
