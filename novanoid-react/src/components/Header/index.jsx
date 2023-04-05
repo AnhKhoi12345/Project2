@@ -1,9 +1,6 @@
 import './Header.scss';
 import Navbar from '../Navbar';
 function Header() {
-  // var nova = document.getElementById('novanoid');
-  // var mini = document.getElementById('minimalism');
-  // var crea = document.getElementById('creative');
   function dotOne() {
     var nova = document.getElementById('novanoid');
     var mini = document.getElementById('minimalism');
@@ -86,9 +83,9 @@ function Header() {
         </h1>
         <span>simple minimal.</span>
         <div>
-          <span id="dot-1" className="dot" onclick={dotOne()}></span>
-          <span id="dot-2" className="dot" onclick={dotTwo()}></span>
-          <span id="dot-3" className="dot" onclick={dotThree()}></span>
+          <span id="dot-1" className="dot" onClick={dotOne}></span>
+          <span id="dot-2" className="dot" onClick={dotTwo}></span>
+          <span id="dot-3" className="dot" onClick={dotThree}></span>
         </div>
       </div>
     </header>
