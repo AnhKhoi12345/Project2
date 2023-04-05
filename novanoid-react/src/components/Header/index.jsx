@@ -63,14 +63,14 @@ function Header() {
     }
     setTimeout(titleAutoChange, 5000);
   }
-  (function ($) {
-    window.onload = (event) => {
-      var nova = document.getElementById('novanoid');
-      nova.classList.add('display-show');
-      document.getElementById('dot-1').classList.add('dot-active');
-      titleAutoChange();
-    };
-  })();
+  // (function ($) {
+  window.onload = (event) => {
+    var nova = document.getElementById('novanoid');
+    nova.classList.add('display-show');
+    document.getElementById('dot-1').classList.add('dot-active');
+    titleAutoChange();
+  };
+  // })();
   return (
     <header className="header">
       <div className="header-container" id="header-container">
