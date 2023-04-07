@@ -1,5 +1,5 @@
 import './work.scss';
-
+import { useEffect } from 'react';
 function Work() {
   function allBtn() {
     var work1 = document.getElementById('work-item-1').classList;
@@ -218,6 +218,10 @@ function Work() {
     btnMountains.remove('work-button-active');
     btnNature.add('work-button-active');
   }
+  useEffect(() => {
+    allBtn();
+  }, []);
+
   return (
     <div id="work" className="work-container">
       <h2>OUR WORKS</h2>

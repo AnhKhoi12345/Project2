@@ -1,20 +1,24 @@
 import './MenuButton.scss';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import { useState } from 'react';
 function MenuButton() {
-  function menuBtn() {
+  const [menuShow, setMenuShow] = useState('hide');
+
+  function menuBtn(evt) {
     let navtoggle = document.getElementById('nav-list-container').classList;
-    if (navtoggle[1] === 'show') {
+    if (menuShow !== 'show') {
+      navtoggle.toggle('show');
+      setMenuShow('show');
+      navtoggle.remove('hide');
+
+      console.log(menuShow);
+    } else if (menuShow === 'show') {
       navtoggle.add('hide');
       navtoggle.toggle('show');
-      console.log(navtoggle[0] + ' if');
-      console.log(navtoggle[1] + ' if');
-    } else if (navtoggle[1] !== 'show') {
-      navtoggle.remove('hide');
-      navtoggle.toggle('show');
-      console.log(navtoggle[0] + ' else if');
-      console.log(navtoggle[1] + ' else if');
+      setMenuShow('hide');
+
+      console.log(menuShow);
     } else {
       console.log('error');
     }
