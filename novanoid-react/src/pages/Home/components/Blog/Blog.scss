@@ -1,0 +1,90 @@
+.blog-container {
+  text-align: center;
+  /* border: 1px solid black; */
+  padding-top: 80px;
+  padding-bottom: 100px;
+  h2 {
+    margin-bottom: 15px;
+    color: var(--darker-blueish-gray);
+  }
+  hr {
+    text-align: center;
+    margin: 0 auto;
+    width: 10%;
+  }
+  .blog-outer-info {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    font-size: small;
+    color: var(--dark-blueish-gray);
+  }
+  .blog-grid {
+    margin: 50px auto;
+    text-align: left;
+    display: grid;
+    /* border: 1px solid black; */
+    width: 93%;
+    height: auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    row-gap: 80px;
+    .blog-item {
+      button {
+        margin-top: 20px;
+        font-size: 16px;
+        /* font-family:'Roboto', sans-serif; */
+        color: var(--darker-aquamarine);
+        background-color: white;
+        border: 1px solid var(--darker-aquamarine);
+        width: 80px;
+        height: 30px;
+        border-radius: 4px;
+        font-weight: 700;
+        cursor: pointer;
+        /* margin-bottom: 15px; */
+      }
+      button:hover {
+        color: white;
+        background-color: var(--darker-aquamarine);
+      }
+      .blog-header {
+        b {
+          font-size: 14px;
+          font-family: 'Roboto', sans-serif;
+          color: var(--darker-blueish-gray);
+          /* padding-left: 15px !important; */
+          /* border: 1px solid black; */
+        }
+      }
+      .blog-date {
+        margin-top: 5px;
+        color: var(--light-blueish-gray);
+        font-size: 12px;
+        font-family: 'Roboto', sans-serif;
+      }
+      .blog-info {
+        margin-top: 15px;
+        font-size: 13px;
+        font-family: 'Roboto', sans-serif;
+        color: var(--dark-blueish-gray);
+      }
+    }
+  }
+  .blog-read-all {
+    font-size: 16px;
+    /* font-family:'Roboto', sans-serif; */
+    color: white;
+    background-color: var(--darker-aquamarine);
+    border: 1px solid var(--darker-aquamarine);
+    width: 160px;
+    height: 40px;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    icon {
+      margin-right: 4px;
+    }
+  }
+}

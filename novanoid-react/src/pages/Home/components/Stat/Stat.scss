@@ -1,0 +1,25 @@
+.stats-container {
+  margin-top: 10px;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  flex-direction: column;
+  .stats {
+    position: relative;
+    margin: 30px auto;
+    /* border: 1px solid black; */
+    width: 200px;
+    color: var(--light-blueish-gray);
+    .icon {
+      position: absolute;
+      color: var(--darker-aquamarine);
+      left: 20px;
+      top: 25px;
+    }
+    .stats-number {
+      color: var(--dark-blueish-gray);
+      font-family: 'Roboto', sans-serif;
+      font-size: 25px;
+    }
+  }
+}

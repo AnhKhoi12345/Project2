@@ -156,6 +156,23 @@ ul {
     height: 0px;
   }
 }
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 @font-face {
   font-family: 'Yanone Kaffeesatz Bold';
   src: local('YanoneKaffeesatz'), url('./fonts/YanoneKaffeesatz-Bold.ttf') format('TrueType');

@@ -1,0 +1,91 @@
+.buy-container {
+  background-color: #f3f4f8;
+  margin-top: 100px;
+  text-align: center;
+  h2 {
+    margin-top: 60px;
+    margin-bottom: 15px;
+    color: var(--darker-blueish-gray);
+  }
+  hr {
+    visibility: hidden;
+    text-align: center;
+    margin: 0 auto;
+    width: 10%;
+  }
+  p {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    font-size: small;
+    color: var(--dark-blueish-gray);
+  }
+  .buy-flexbox {
+    /* border: 1px solid black; */
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .buy-box {
+      text-align: center;
+      margin-bottom: 50px;
+      width: 93%;
+      height: 370px;
+      border: 1px solid azure;
+      // opacity: 0;
+      hr {
+        width: 100%;
+        border: azure;
+      }
+      h3 {
+        padding-top: 30px;
+        height: 70px;
+        background-color: #f9f9fb;
+        color: var(--dark-blueish-gray);
+      }
+      .buy-info {
+        background-color: white;
+        height: 300px;
+        padding-top: 30px;
+        font-family: 'Roboto', sans-serif;
+        .buy-cost {
+          font-size: x-large;
+          font-family: 'Roboto', sans-serif;
+          color: var(--darker-aquamarine);
+          font-weight: 400;
+          margin-bottom: 5px;
+        }
+        p {
+          color: var(--light-blueish-gray);
+          /* margin-top: 2px; */
+          font-family: 'Roboto', sans-serif;
+        }
+        button {
+          height: 30px;
+          width: 85px;
+          margin-top: 25px;
+          background-color: var(--darker-aquamarine);
+          color: white;
+          border: none;
+          border-radius: 4px;
+          font-weight: 700;
+          cursor: pointer;
+          i {
+            display: none;
+          }
+
+          .buy-i-hover {
+            display: block;
+          }
+        }
+        .buy-button-dark {
+          background-color: var(--evendarker-blueish-gray) !important;
+        }
+        .buy-button-hover {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -87,7 +87,7 @@ function Navbar() {
       <div className="nav-list-container" id="nav-list-container">
         <ul className="nav-list">
           <li className="nav-list-item nav-list-item1">
-            <Link href="/">HOME</Link>
+            <a href="#">HOME</a>
           </li>
           <li className="nav-list-item nav-list-item2">
             <a href="#work">WORK</a>
