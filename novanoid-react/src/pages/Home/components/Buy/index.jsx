@@ -1,6 +1,7 @@
 import './Buy.scss';
 
 function Buy() {
+  const hashtag = '#';
   return (
     <div id="price" className="buy-container">
       <hr className="normal-hr" />
@@ -22,7 +23,7 @@ function Buy() {
             <p>FTP</p>
             {/* <br> */}
             <p>Full Support</p>
-            <a href="#">
+            <a href={hashtag}>
               <button id="buy-button-1">
                 <span id="buy-now-1">BUY NOW</span>
                 <i className="fa-solid fa-credit-card" id="buy-i-1" />
@@ -44,7 +45,7 @@ function Buy() {
             <p>FTP</p>
             {/* <br> */}
             <p>Full Support</p>
-            <a href="#">
+            <a href={hashtag}>
               <button id="buy-button-2">
                 <span id="buy-now-2">BUY NOW</span>
                 <i className="fa-solid fa-credit-card" id="buy-i-2" />
@@ -66,7 +67,7 @@ function Buy() {
             <p>FTP + SSH</p>
             {/* <br> */}
             <p>24/7 Full Support</p>
-            <a href="#">
+            <a href={hashtag}>
               <button id="buy-button-3">
                 <span id="buy-now-3">BUY NOW</span>
                 <i className="fa-solid fa-credit-card" id="buy-i-3" />

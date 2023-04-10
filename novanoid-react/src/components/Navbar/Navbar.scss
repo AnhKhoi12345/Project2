@@ -38,41 +38,6 @@
       color: white;
     }
   }
-  .nav-list-container {
-    position: absolute;
-    top: 100px;
-    width: 100%;
-    transition: height 0.5s;
-    height: 0px;
-    overflow: hidden;
-    .nav-list {
-      margin: 0 auto;
-      margin-bottom: 1px;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      list-style: none;
-      /* border: 1px solid black; */
-      top: 100px;
-      width: 90%;
-      background-color: var(--darker-blueish-gray);
-      .nav-list-item {
-        margin-top: 10px;
-        margin-bottom: 5px;
-        /* border: 1px solid black; */
-        a {
-          color: azure;
-          text-decoration: none;
-        }
-      }
-      .nav-list-item1 {
-        margin-top: 20px;
-      }
-      .nav-list-item7 {
-        margin-bottom: 15px;
-      }
-    }
-  }
   .show {
     height: auto;
     animation: navmove 1s;

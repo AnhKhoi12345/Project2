@@ -85,7 +85,7 @@ function Contact() {
             name="input-number"
             required=""
             maxLength={10}
-            onkeypress="return isNumberKey(event)"
+            // onKeyPress={() => {return isNumberKey(event)}}
           />
         </div>
         <div className="subject-div">
@@ -111,7 +111,7 @@ function Contact() {
             defaultValue={''}
           />
         </div>
-        <button id="form-send-message" type="button" value="Submit" className="contact-form-btn" onclick="submitForm()">
+        <button id="form-send-message" type="button" value="Submit" className="contact-form-btn" onClick="submitForm()">
           <FontAwesomeIcon icon={faPaperPlane} className="icon" size="lg" />
           SEND MESSAGE
         </button>

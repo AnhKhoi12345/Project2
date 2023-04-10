@@ -14,7 +14,7 @@ function Stat() {
           <span className="stat-text">CLIENTS</span>
         </b>
       </li>
-      <li class="stats">
+      <li className="stats">
         <FontAwesomeIcon icon={faBriefcase} className="icon" size="lg" />
         <b>
           <span className="stats-number" id="projects"></span>
@@ -34,7 +34,7 @@ function Stat() {
           <span className="stat-text">COUNTRIES</span>
         </b>
       </li>
-      <li class="stats">
+      <li className="stats">
         <FontAwesomeIcon icon={faBuilding} className="icon" size="lg" />
         <b>
           <span className="stats-number" id="offices"></span>

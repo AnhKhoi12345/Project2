@@ -11,6 +11,7 @@ import {
 import { faBasketball } from '@fortawesome/free-solid-svg-icons';
 
 function Footer() {
+  const hashtag = '#';
   return (
     <footer>
       <div className="footer-container">
@@ -23,22 +24,22 @@ function Footer() {
           <a href="https://www.facebook.com/cmctssgvn/">
             <FontAwesomeIcon icon={faFacebook} className="icon" size="lg" />
           </a>
-          <a href="#">
+          <a href={hashtag}>
             <FontAwesomeIcon icon={faTwitter} className="icon" size="lg" />
           </a>
-          <a href="#">
+          <a href={hashtag}>
             <FontAwesomeIcon icon={faBasketball} className="icon" size="lg" />
           </a>
-          <a href="#">
+          <a href={hashtag}>
             <FontAwesomeIcon icon={faLinkedin} className="icon" size="lg" />
           </a>
-          <a href="#">
+          <a href={hashtag}>
             <FontAwesomeIcon icon={faGooglePlus} className="icon" size="lg" />
           </a>
-          <a href="#">
+          <a href={hashtag}>
             <FontAwesomeIcon icon={faSquareInstagram} className="icon" size="lg" />
           </a>
-          <a href="#">
+          <a href={hashtag}>
             <FontAwesomeIcon icon={faTumblr} className="icon" size="lg" />
           </a>
         </div>

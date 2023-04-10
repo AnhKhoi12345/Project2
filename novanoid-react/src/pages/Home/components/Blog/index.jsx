@@ -2,6 +2,7 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 import './Blog.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Blog() {
+  const hashtag = '#';
   return (
     <div id="blog" className="blog-container">
       <h2>HOW MANY</h2>
@@ -17,7 +18,7 @@ function Blog() {
             Aenean odio massa, mattis et vestibulum ac, iaculis non lacus. Pellentesque auctor arcu vulputate est rutrum
             egestas.{' '}
           </p>
-          <a href="#">
+          <a href={hashtag}>
             <button>READ MORE</button>
           </a>
         </div>
@@ -30,7 +31,7 @@ function Blog() {
             Aenean odio massa, mattis et vestibulum ac, iaculis non lacus. Pellentesque auctor arcu vulputate est rutrum
             egestas.{' '}
           </p>
-          <a href="#">
+          <a href={hashtag}>
             <button>READ MORE</button>
           </a>
         </div>
@@ -43,7 +44,7 @@ function Blog() {
             Aenean odio massa, mattis et vestibulum ac, iaculis non lacus. Pellentesque auctor arcu vulputate est rutrum
             egestas.{' '}
           </p>
-          <a href="#">
+          <a href={hashtag}>
             <button>READ MORE</button>
           </a>
         </div>
@@ -56,7 +57,7 @@ function Blog() {
             Aenean odio massa, mattis et vestibulum ac, iaculis non lacus. Pellentesque auctor arcu vulputate est rutrum
             egestas.{' '}
           </p>
-          <a href="#">
+          <a href={hashtag}>
             <button>READ MORE</button>
           </a>
         </div>
@@ -69,7 +70,7 @@ function Blog() {
             Aenean odio massa, mattis et vestibulum ac, iaculis non lacus. Pellentesque auctor arcu vulputate est rutrum
             egestas.{' '}
           </p>
-          <a href="#">
+          <a href={hashtag}>
             <button>READ MORE</button>
           </a>
         </div>
@@ -82,7 +83,7 @@ function Blog() {
             Aenean odio massa, mattis et vestibulum ac, iaculis non lacus. Pellentesque auctor arcu vulputate est rutrum
             egestas.{' '}
           </p>
-          <a href="#">
+          <a href={hashtag}>
             <button>READ MORE</button>
           </a>
         </div>

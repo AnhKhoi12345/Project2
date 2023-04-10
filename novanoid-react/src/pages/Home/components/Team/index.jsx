@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBasketball } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 function Team() {
+  const hashtag = '#';
   function teamOverlay() {
     var teamOverlay1 = document.getElementById('team-img-1');
     var teamOverlay2 = document.getElementById('team-img-2');
@@ -71,22 +72,22 @@ function Team() {
   }, []);
 
   return (
-    <div id="team" class="team-container">
+    <div id="team" className="team-container">
       <h2>OUR TEAM</h2>
       <hr />
       <p>Praesent lacinia sem sed risus consectetur, et volutpat nulla bibendum.</p>
-      <ul class="team-flexbox">
-        <li class="team-member">
-          <div class="team-img" id="team-img-1">
-            <div class="team-overlay" id="team-overlay-1">
-              <div class="team-icon-box">
-                <a href="#">
+      <ul className="team-flexbox">
+        <li className="team-member">
+          <div className="team-img" id="team-img-1">
+            <div className="team-overlay" id="team-overlay-1">
+              <div className="team-icon-box">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faFacebook} className="facebook-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faTwitter} className="twitter-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faBasketball} className="basketball-i" size="lg" />
                 </a>
               </div>
@@ -96,17 +97,17 @@ function Team() {
           <h3>RUSSEL J.SPAN</h3>
           <span>Founder</span>
         </li>
-        <li class="team-member">
-          <div class="team-img" id="team-img-2">
-            <div class="team-overlay" id="team-overlay-2">
-              <div class="team-icon-box">
-                <a href="#">
+        <li className="team-member">
+          <div className="team-img" id="team-img-2">
+            <div className="team-overlay" id="team-overlay-2">
+              <div className="team-icon-box">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faFacebook} className="facebook-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faTwitter} className="twitter-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faBasketball} className="basketball-i" size="lg" />
                 </a>
               </div>
@@ -116,17 +117,17 @@ function Team() {
           <h3>ETTA R.CARTER</h3>
           <span>Manager</span>
         </li>
-        <li class="team-member">
-          <div class="team-img" id="team-img-3">
-            <div class="team-overlay" id="team-overlay-3">
-              <div class="team-icon-box">
-                <a href="#">
+        <li className="team-member">
+          <div className="team-img" id="team-img-3">
+            <div className="team-overlay" id="team-overlay-3">
+              <div className="team-icon-box">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faFacebook} className="facebook-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faTwitter} className="twitter-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faBasketball} className="basketball-i" size="lg" />
                 </a>
               </div>
@@ -136,17 +137,17 @@ function Team() {
           <h3>RONALD J.SMITH</h3>
           <span>Coder</span>
         </li>
-        <li class="team-member">
-          <div class="team-img" id="team-img-4">
-            <div class="team-overlay" id="team-overlay-4">
-              <div class="team-icon-box">
-                <a href="#">
+        <li className="team-member">
+          <div className="team-img" id="team-img-4">
+            <div className="team-overlay" id="team-overlay-4">
+              <div className="team-icon-box">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faFacebook} className="facebook-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faTwitter} className="twitter-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faBasketball} className="basketball-i" size="lg" />
                 </a>
               </div>
@@ -156,17 +157,17 @@ function Team() {
           <h3>PATRICK J.LAMES</h3>
           <span>Developer</span>
         </li>
-        <li class="team-member">
-          <div class="team-img" id="team-img-5">
-            <div class="team-overlay" id="team-overlay-5">
-              <div class="team-icon-box">
-                <a href="#">
+        <li className="team-member">
+          <div className="team-img" id="team-img-5">
+            <div className="team-overlay" id="team-overlay-5">
+              <div className="team-icon-box">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faFacebook} className="facebook-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faTwitter} className="twitter-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faBasketball} className="basketball-i" size="lg" />
                 </a>
               </div>
@@ -176,17 +177,17 @@ function Team() {
           <h3>TAMARA R.BURNS</h3>
           <span>Coodrdinator</span>
         </li>
-        <li class="team-member">
-          <div class="team-img" id="team-img-6">
-            <div class="team-overlay" id="team-overlay-6">
-              <div class="team-icon-box">
-                <a href="#">
+        <li className="team-member">
+          <div className="team-img" id="team-img-6">
+            <div className="team-overlay" id="team-overlay-6">
+              <div className="team-icon-box">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faFacebook} className="facebook-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faTwitter} className="twitter-i" size="lg" />
                 </a>
-                <a href="#">
+                <a href={hashtag}>
                   <FontAwesomeIcon icon={faBasketball} className="basketball-i" size="lg" />
                 </a>
               </div>

@@ -2,49 +2,46 @@ import './Navbar.scss';
 import { Link } from 'react-router-dom';
 import '../../variable.scss';
 import MenuButton from './components/MenuButton';
+import { useRef } from 'react';
 function Navbar() {
-  // (function ($) {
-  //   window.onload = (event) => {
-  window.onscroll = function () {
+  const navBar = useRef(null);
+  function navbarScroll() {
     let scrollTop = window.pageYOffset;
-    console.log(scrollTop);
-    let elementNavbar = document.getElementById('nav-bar');
+    // console.log(scrollTop);
     let elementBody = document.getElementById('body');
     let elementNavBtn = document.getElementById('menu-icon');
     let elementListContainer = document.getElementById('nav-list-container');
     let navFlexItem = document.getElementsByClassName('nav-flex-item');
 
     if (scrollTop >= 147) {
-      elementNavbar.classList.add('fix-navbar');
+      navBar.current.classList.add('fix-navbar');
       elementBody.classList.add('noPadBody');
-      console.log('navbar stick Activated');
+      // console.log('navbar stick Activated');
     } else {
-      elementNavbar.classList.remove('fix-navbar');
+      navBar.current.classList.remove('fix-navbar');
       elementBody.classList.remove('noPadBody');
-      console.log('navbar stick Deactivated');
+      // console.log('navbar stick Deactivated');
     }
 
     if (scrollTop >= 550) {
-      for (var i = 0; i < navFlexItem.length; i++) {
+      for (let i = 0; i < navFlexItem.length; i++) {
         navFlexItem[i].classList.add('navBtnGray');
       }
       elementNavBtn.classList.add('navBtnGray');
-      elementNavbar.classList.add('white-navbar');
+      navBar.current.classList.add('white-navbar');
       elementListContainer.classList.add('white-navbar');
     } else {
-      for (var i = 0; i < navFlexItem.length; i++) {
+      for (let i = 0; i < navFlexItem.length; i++) {
         navFlexItem[i].classList.remove('navBtnGray');
       }
       elementNavBtn.classList.remove('navBtnGray');
-      elementNavbar.classList.remove('white-navbar');
+      navBar.current.classList.remove('white-navbar');
       elementListContainer.classList.remove('white-navbar');
     }
-  };
-  // };
-  // })();
-
+  }
+  window.addEventListener('scroll', navbarScroll);
   return (
-    <nav className="nav-bar" id="nav-bar">
+    <nav ref={navBar} className="nav-bar" id="nav-bar">
       <Link className="nav-logo" to="/"></Link>
       <MenuButton />
       {/* <ul className="nav-flex">
@@ -84,31 +81,6 @@ function Navbar() {
           </a>
         </li>
       </ul> */}
-      <div className="nav-list-container" id="nav-list-container">
-        <ul className="nav-list">
-          <li className="nav-list-item nav-list-item1">
-            <a href="#">HOME</a>
-          </li>
-          <li className="nav-list-item nav-list-item2">
-            <a href="#work">WORK</a>
-          </li>
-          <li className="nav-list-item nav-list-item3">
-            <a href="#servie">SERVICES</a>
-          </li>
-          <li className="nav-list-item nav-list-item4">
-            <a href="#team">TEAM</a>
-          </li>
-          <li className="nav-list-item nav-list-item5">
-            <a href="#price">PRICES</a>
-          </li>
-          <li className="nav-list-item nav-list-item6">
-            <a href="#blog">BLOG</a>
-          </li>
-          <li className="nav-list-item nav-list-item7">
-            <a href="#contact">CONTACTS</a>
-          </li>
-        </ul>
-      </div>
     </nav>
   );
 }

@@ -17,7 +17,7 @@ function Home() {
       <Service></Service>
       <Parallax></Parallax>
       <Team></Team>
-      <hr class="dashed-hr" />
+      <hr className="dashed-hr" />
       <Stat></Stat>
       <Buy></Buy>
       <Blog></Blog>
