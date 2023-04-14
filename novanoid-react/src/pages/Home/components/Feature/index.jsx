@@ -2,6 +2,7 @@ import './feature.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLeaf, faDesktop, faEye, faFont, faCodeFork, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import { useRef } from 'react';
+import { fadeInScroll } from '../../../../GlobalFunction';
 function Feature() {
   const feat1 = useRef(null);
   const feat2 = useRef(null);
@@ -9,39 +10,12 @@ function Feature() {
   const feat4 = useRef(null);
   const feat5 = useRef(null);
   const feat6 = useRef(null);
-  const textInFully = 'animation: fadeinfully 1.5s forwards';
-  function isInViewport(element) {
-    const rect = element.current.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-  function featScroll() {
-    console.log('bruh');
-    if (isInViewport(feat1) === true) {
-      feat1.current.style = textInFully;
+  const featItem = [feat1, feat2, feat3, feat4, feat5, feat6];
+  window.addEventListener('scroll', () => {
+    for (let i = 0; i < featItem.length; i++) {
+      fadeInScroll(featItem[i]);
     }
-    if (isInViewport(feat2) === true) {
-      feat2.current.style = textInFully;
-    }
-    if (isInViewport(feat3) === true) {
-      feat3.current.style = textInFully;
-    }
-    if (isInViewport(feat4) === true) {
-      feat4.current.style = textInFully;
-    }
-    if (isInViewport(feat5) === true) {
-      feat5.current.style = textInFully;
-    }
-    if (isInViewport(feat6) === true) {
-      feat6.current.style = textInFully;
-    }
-  }
-  window.addEventListener('scroll', featScroll);
+  });
   return (
     <div className="feature-container">
       <div ref={feat1} className="feature feat1">

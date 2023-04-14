@@ -1,7 +1,17 @@
+import { useRef } from 'react';
 import './Buy.scss';
-
+import { fadeInScroll } from '../../../../GlobalFunction';
 function Buy() {
   const hashtag = '#';
+  const buy1 = useRef(null);
+  const buy2 = useRef(null);
+  const buy3 = useRef(null);
+  const buyItem = [buy1, buy2, buy3];
+  window.addEventListener('scroll', () => {
+    for (let i = 0; i < buyItem.length; i++) {
+      fadeInScroll(buyItem[i]);
+    }
+  });
   return (
     <div id="price" className="buy-container">
       <hr className="normal-hr" />
@@ -9,7 +19,7 @@ function Buy() {
       <hr />
       <p>Praesent lacinia sem sed risus consectetur, et volutpat nulla bibendum.</p>
       <div className="buy-flexbox">
-        <div className="buy-box buy-box-1">
+        <div className="buy-box buy-box-1" ref={buy1}>
           <h3>BASIC</h3>
           <hr className="dashed-hr" />
           <div className="buy-info">
@@ -31,7 +41,7 @@ function Buy() {
             </a>
           </div>
         </div>
-        <div className="buy-box buy-box-2">
+        <div className="buy-box buy-box-2" ref={buy2}>
           <h3>STANDART</h3>
           <hr className="dashed-hr" />
           <div className="buy-info">
@@ -53,7 +63,7 @@ function Buy() {
             </a>
           </div>
         </div>
-        <div className="buy-box buy-box-3">
+        <div className="buy-box buy-box-3" ref={buy3}>
           <h3>PRO</h3>
           <hr className="dashed-hr" />
           <div className="buy-info">

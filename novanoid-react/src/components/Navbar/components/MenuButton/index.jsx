@@ -8,7 +8,6 @@ function MenuButton() {
   }
   let [menuShow, setMenuShow] = useState(null);
   console.log('menuShow: ' + menuShow);
-  const hashtag = '#';
   function menuBtn() {
     if (menuShow !== 'show') {
       setMenuShow('show');
@@ -21,6 +20,15 @@ function MenuButton() {
     }
     console.log('menu button clicked');
   }
+  const menuList = [
+    { id: 1, title: 'HOME', href: '#' },
+    { id: 2, title: 'WORK', href: '#work' },
+    { id: 3, title: 'SERVICES', href: '#service' },
+    { id: 4, title: 'TEAM', href: '#team' },
+    { id: 5, title: 'PRICES', href: '#price' },
+    { id: 6, title: 'BLOG', href: '#blog' },
+    { id: 7, title: 'CONTACTS', href: '#contact' },
+  ];
   return (
     <>
       <IconButton onClick={menuBtn}>
@@ -31,27 +39,13 @@ function MenuButton() {
         id="nav-list-container"
       >
         <ul className="nav-list">
-          <li className="nav-list-item nav-list-item1">
-            <a href={hashtag}>HOME</a>
-          </li>
-          <li className="nav-list-item nav-list-item2">
-            <a href="#work">WORK</a>
-          </li>
-          <li className="nav-list-item nav-list-item3">
-            <a href="#service">SERVICES</a>
-          </li>
-          <li className="nav-list-item nav-list-item4">
-            <a href="#team">TEAM</a>
-          </li>
-          <li className="nav-list-item nav-list-item5">
-            <a href="#price">PRICES</a>
-          </li>
-          <li className="nav-list-item nav-list-item6">
-            <a href="#blog">BLOG</a>
-          </li>
-          <li className="nav-list-item nav-list-item7">
-            <a href="#contact">CONTACTS</a>
-          </li>
+          {menuList.map((item) => {
+            return (
+              <li className="nav-list-item" key={item.id}>
+                <a href={item.href}>{item.title}</a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </>

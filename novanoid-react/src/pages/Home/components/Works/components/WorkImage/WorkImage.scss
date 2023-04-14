@@ -33,16 +33,11 @@
         text-decoration: underline;
       }
     }
+    .overlay:hover {
+      animation: fadein09 0.5s forwards;
+    }
+    .overlay:not(:hover) {
+      animation: fadeout09 0.5s forwards;
+    }
   }
-  // #work-overlay-1 {
-  //   display: block;
-  //   position: absolute;
-  //   background-color: var(--darker-aquamarine);
-  //   width: 500px;
-  //   height: 200px;
-  //   color: black;
-  //   /* z-index: 1; */
-  //   opacity: 0;
-  //   cursor: pointer;
-  // }
 }
