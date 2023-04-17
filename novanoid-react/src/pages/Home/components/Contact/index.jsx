@@ -1,8 +1,69 @@
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import './Contact.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useRef, useState } from 'react';
 
 function Contact() {
+  let greetUser = useRef(null);
+  let errorInput = useRef(null);
+  let nameInput = useRef(null);
+  let emailInput = useRef(null);
+  let phoneInput = useRef(null);
+  let subjectInput = useRef(null);
+  let messageInput = useRef(null);
+  // let [validInput, setValidInput] = useState(false);
+  let validInput = true;
+  const [value, setValue] = useState('');
+  const handleChange = (event) => {
+    const result = event.target.value.replace(/\D/g, '');
+    setValue(result);
+  };
+  const errorStyle = "1px solid red'";
+  const submitForm = () => {
+    validInput = true;
+    nameInput.current.style.border =
+      emailInput.current.style.border =
+      phoneInput.current.style.border =
+      subjectInput.current.style.border =
+      messageInput.current.style.border =
+      errorInput.current.innerHTML =
+      greetUser.current.innerHTML =
+        '';
+    if (nameInput.current.value.length < 4) {
+      let error = document.createTextNode('Name must be at least 4 characters. ');
+      errorInput.current.appendChild(error);
+      validInput = false;
+      nameInput.current.style.border = errorStyle;
+    }
+    if (!emailInput.current.value.includes('@gmail.com')) {
+      let error = document.createTextNode('Email must be valid (have gmail.com). ');
+      errorInput.current.appendChild(error);
+      validInput = false;
+      emailInput.current.style.border = errorStyle;
+    }
+    if (phoneInput.current.value.length < 10) {
+      let error = document.createTextNode('Phone number must be 10 numbers. ');
+      errorInput.current.appendChild(error);
+      validInput = false;
+      phoneInput.current.style.border = errorStyle;
+    }
+    if (subjectInput.current.value.length < 4) {
+      let error = document.createTextNode('Subject must be at least 4 characters. ');
+      errorInput.current.appendChild(error);
+      validInput = false;
+      subjectInput.current.style.border = errorStyle;
+    }
+    if (messageInput.current.value.length < 4) {
+      let error = document.createTextNode('Message must be at least 4 characters. ');
+      errorInput.current.appendChild(error);
+      validInput = false;
+      messageInput.current.style.border = errorStyle;
+    }
+
+    if (validInput === true) {
+      greetUser.current.innerHTML = 'Hello ' + nameInput.current.value + '. Thank you for your message';
+    }
+  };
   return (
     <div id="contact" className="contact-container">
       <h2>CONTACT US</h2>
@@ -20,27 +81,11 @@ function Contact() {
         <div className="contact-flex-item contact-2">
           <h3 className="contact-mail-header">E-MAIL</h3>
           <p className="contact-mail-body">
-            <a
-              href="mailto: support@example.com"
-              style={{
-                textDecoration: 'none !important',
-                color: '#48cfae !important',
-                fontFamily: '"Roboto", sans-serif !important',
-                fontSize: '13px !important',
-              }}
-            >
+            <a className="mail" href="mailto: support@example.com">
               support@example.com
             </a>
             <br />
-            <a
-              href="mailto: maredwinz@gmail.com"
-              style={{
-                textDecoration: 'none !important',
-                color: '#48cfae !important',
-                fontFamily: '"Roboto", sans-serif !important',
-                fontSize: '13px !important',
-              }}
-            >
+            <a className="mail" href="mailto: maredwinz@gmail.com">
               maredwinz@gmail.com
             </a>
           </p>
@@ -61,19 +106,21 @@ function Contact() {
             id="form-name"
             type="text"
             placeholder="Name"
-            name="input-name"
-            required=""
+            name="Name"
+            required
             minLength={3}
+            ref={nameInput}
           />
         </div>
         <div className="email-div">
           <input
             className="form-input"
+            ref={emailInput}
             id="form-email"
             type="email"
             placeholder="Email"
-            name="input-email"
-            required=""
+            name="Email"
+            required
           />
         </div>
         <div className="number-div">
@@ -82,10 +129,12 @@ function Contact() {
             id="form-number"
             type="text"
             placeholder="Phone number"
-            name="input-number"
-            required=""
+            name="Phone number"
+            required
             maxLength={10}
-            // onKeyPress={() => {return isNumberKey(event)}}
+            value={value}
+            onChange={handleChange}
+            ref={phoneInput}
           />
         </div>
         <div className="subject-div">
@@ -94,9 +143,10 @@ function Contact() {
             id="form-subject"
             type="text"
             placeholder="Subject"
-            name="input-subject"
-            required=""
+            name="Subject"
+            required
             minLength={3}
+            ref={subjectInput}
           />
         </div>
         <div className="message-div">
@@ -105,20 +155,22 @@ function Contact() {
             id="form-message"
             type="text"
             placeholder="Message"
-            name="input-message"
-            required=""
+            name="Message"
+            required
             minLength={3}
             defaultValue={''}
+            ref={messageInput}
           />
         </div>
-        <button id="form-send-message" type="button" value="Submit" className="contact-form-btn" onClick="submitForm()">
+        <button id="form-send-message" type="button" value="Submit" className="contact-form-btn" onClick={submitForm}>
           <FontAwesomeIcon icon={faPaperPlane} className="icon" size="lg" />
           SEND MESSAGE
         </button>
       </form>
-      <div id="input-error" />
-      <div id="greet-user" />
+      <div ref={errorInput} id="input-error" />
+      <div ref={greetUser} id="greet-user" />
     </div>
   );
 }
+
 export default Contact;

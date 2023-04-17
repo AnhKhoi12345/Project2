@@ -54,8 +54,13 @@
           font-size: 14px;
           font-family: 'Roboto', sans-serif;
           color: var(--darker-blueish-gray);
+          cursor: pointer;
+
           /* padding-left: 15px !important; */
           /* border: 1px solid black; */
+        }
+        b:hover {
+          color: var(--darker-aquamarine);
         }
       }
       .blog-date {
@@ -85,6 +90,12 @@
     cursor: pointer;
     icon {
       margin-right: 4px;
+    }
+  }
+  .blog-read-all:hover {
+    background-color: var(--evendarker-blueish-gray);
+    .icon {
+      display: none;
     }
   }
 }

@@ -1,0 +1,88 @@
+.stats {
+  position: relative;
+  margin: 30px auto;
+  /* border: 1px solid black; */
+  width: 200px;
+  color: var(--light-blueish-gray);
+  .icon {
+    position: absolute;
+    color: var(--darker-aquamarine);
+    left: 20px;
+    top: 8px;
+  }
+  .stats-number {
+    color: var(--dark-blueish-gray);
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+  }
+  @property --num {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+  }
+
+  .client-increase {
+    animation: client 1s forwards alternate ease-in-out;
+    counter-reset: num var(--num);
+  }
+  .client-increase::after {
+    content: counter(num);
+  }
+
+  @keyframes client {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 1642;
+    }
+  }
+  .project-increase {
+    animation: project 1s forwards alternate ease-in-out;
+    counter-reset: num var(--num);
+  }
+  .project-increase::after {
+    content: counter(num);
+  }
+
+  @keyframes project {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 2758;
+    }
+  }
+  .country-increase {
+    animation: country 1s forwards alternate ease-in-out;
+    counter-reset: num var(--num);
+  }
+  .country-increase::after {
+    content: counter(num);
+  }
+
+  @keyframes country {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 53;
+    }
+  }
+  .office-increase {
+    animation: office 1s forwards alternate ease-in-out;
+    counter-reset: num var(--num);
+  }
+  .office-increase::after {
+    content: counter(num);
+  }
+
+  @keyframes office {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 3;
+    }
+  }
+}

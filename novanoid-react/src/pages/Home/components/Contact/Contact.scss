@@ -50,6 +50,12 @@
         font-family: 'Roboto', sans-serif;
         font-size: 13px;
         text-decoration: none !important;
+        .mail {
+          color: var(--darker-aquamarine);
+        }
+        .mail:hover {
+          color: var(--darker-blueish-gray);
+        }
       }
       .contact-phone-header {
         margin-top: 5px;
@@ -114,9 +120,10 @@
     }
   }
   #greet-user {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin-top: 20px;
     color: var(--darker-aquamarine);
-    font-size: 25px;
+    font-size: 14px;
   }
   #input-error {
     margin-top: 20px;

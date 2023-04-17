@@ -1,0 +1,25 @@
+.feature {
+  opacity: 0;
+  div {
+    padding-right: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: small;
+  }
+  h3,
+  div {
+    margin-left: 50px;
+  }
+  h3 {
+    color: var(--darker-blueish-gray);
+  }
+  div {
+    color: var(--dark-blueish-gray);
+  }
+  .feat-i {
+    position: relative;
+    top: 23px;
+    color: MediumAquaMarine;
+    left: 15px;
+  }
+}

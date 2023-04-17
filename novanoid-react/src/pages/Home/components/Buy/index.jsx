@@ -1,6 +1,8 @@
 import { useRef } from 'react';
 import './Buy.scss';
 import { fadeInScroll } from '../../../../GlobalFunction';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWallet } from '@fortawesome/free-solid-svg-icons';
 function Buy() {
   const hashtag = '#';
   const buy1 = useRef(null);
@@ -36,7 +38,7 @@ function Buy() {
             <a href={hashtag}>
               <button id="buy-button-1">
                 <span id="buy-now-1">BUY NOW</span>
-                <i className="fa-solid fa-credit-card" id="buy-i-1" />
+                <FontAwesomeIcon className="icon" icon={faWallet} />
               </button>
             </a>
           </div>
@@ -58,7 +60,7 @@ function Buy() {
             <a href={hashtag}>
               <button id="buy-button-2">
                 <span id="buy-now-2">BUY NOW</span>
-                <i className="fa-solid fa-credit-card" id="buy-i-2" />
+                <FontAwesomeIcon className="icon" icon={faWallet} />
               </button>
             </a>
           </div>
@@ -80,7 +82,7 @@ function Buy() {
             <a href={hashtag}>
               <button id="buy-button-3">
                 <span id="buy-now-3">BUY NOW</span>
-                <i className="fa-solid fa-credit-card" id="buy-i-3" />
+                <FontAwesomeIcon className="icon" icon={faWallet} />
               </button>
             </a>
           </div>

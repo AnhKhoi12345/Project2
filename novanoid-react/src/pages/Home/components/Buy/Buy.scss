@@ -71,11 +71,21 @@
           border-radius: 4px;
           font-weight: 700;
           cursor: pointer;
-          i {
+          .icon {
+            margin: 0 auto;
             display: none;
           }
 
           .buy-i-hover {
+            display: block;
+          }
+        }
+        button:hover {
+          background-color: var(--evendarker-blueish-gray);
+          span {
+            display: none;
+          }
+          .icon {
             display: block;
           }
         }

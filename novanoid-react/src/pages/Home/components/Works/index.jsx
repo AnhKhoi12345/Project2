@@ -101,7 +101,7 @@ function Work() {
       <ul className="work-category">
         {buttonActive.map((item) => {
           return (
-            <li>
+            <li key={item.id}>
               <button className={`${item.active ? 'work-button-active' : ''}`} onClick={() => filterButton(item.name)}>
                 {item.name.toUpperCase()}
               </button>
