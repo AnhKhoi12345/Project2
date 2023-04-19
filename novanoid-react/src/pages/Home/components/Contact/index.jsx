@@ -36,7 +36,7 @@ function Contact() {
       nameInput.current.style.border = errorStyle;
     }
     if (!emailInput.current.value.includes('@gmail.com')) {
-      let error = document.createTextNode('Email must be valid (have gmail.com). ');
+      let error = document.createTextNode('Email must be valid. ');
       errorInput.current.appendChild(error);
       validInput = false;
       emailInput.current.style.border = errorStyle;

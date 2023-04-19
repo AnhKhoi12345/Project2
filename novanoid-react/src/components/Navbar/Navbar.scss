@@ -7,18 +7,6 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  // border: 1px solid yellow;
-  //   background-color: red;
-  //   #navbar-toggle {
-  //     height: 20px;
-  //     border: 0;
-  //     background: none;
-  //     cursor: pointer;
-  //     margin-right: 30px;
-  //   }
-  //   #toggle-icon {
-  //     color: white;
-  //   }
   .nav-logo {
     background: url(http://demo.rommar.in.ua/novanoid/novanoid-1/img/logo-dark.png) no-repeat;
     width: 80px;
@@ -34,8 +22,10 @@
     justify-content: space-evenly;
     margin-right: 30px;
     .nav-flex-item {
-      text-decoration: none;
-      color: white;
+      .nav-option {
+        text-decoration: none;
+        color: white !important;
+      }
     }
   }
   .show {
@@ -85,4 +75,12 @@
 }
 .white-navbar {
   background-color: white !important;
+}
+@media only screen and (min-width: 767px) and (max-width: 987px) {
+  .nav-bar {
+    width: 720px;
+    .nav-flex {
+      display: flex;
+    }
+  }
 }

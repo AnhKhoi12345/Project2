@@ -118,6 +118,12 @@
         margin-right: 4px;
       }
     }
+    .contact-form-btn:hover {
+      background-color: var(--darker-blueish-gray);
+      .icon {
+        display: none;
+      }
+    }
   }
   #greet-user {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;

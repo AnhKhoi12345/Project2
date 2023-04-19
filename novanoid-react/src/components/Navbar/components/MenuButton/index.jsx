@@ -1,8 +1,13 @@
 import './MenuButton.scss';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 function MenuButton() {
+  const menuIcon = useRef(null);
+  const navListContainer = useRef(null);
+  const navListItem = useRef(null);
+  const greyButton = 'color: var(--darker-blueish-gray)';
+  const whiteNavbar = 'backgroundColor: white';
   function classNames(...args) {
     return args.filter(String).join(' ');
   }
@@ -29,19 +34,37 @@ function MenuButton() {
     { id: 6, title: 'BLOG', href: '#blog' },
     { id: 7, title: 'CONTACTS', href: '#contact' },
   ];
+  function navbarScroll() {
+    let scrollTop = window.pageYOffset;
+    // let navFlexItem = document.getElementsByClassName('nav-flex-item');
+    if (scrollTop >= 550) {
+      // for (let i = 0; i < navFlexItem.length; i++) {
+      //   navFlexItem[i].classList.add('navBtnGray');
+      // }
+      menuIcon.current.style = greyButton;
+      navListContainer.current.style = whiteNavbar;
+    } else {
+      // for (let i = 0; i < navFlexItem.length; i++) {
+      //   navFlexItem[i].classList.remove('navBtnGray');
+      // }
+      navListContainer.current.style = menuIcon.current.style = '';
+    }
+  }
+  window.addEventListener('scroll', navbarScroll);
   return (
     <>
-      <IconButton onClick={menuBtn}>
-        <MenuIcon id="menu-icon" />
+      <IconButton onClick={menuBtn} id="navbar-toggle">
+        <MenuIcon id="menu-icon" ref={menuIcon} />
       </IconButton>
       <div
         className={classNames('nav-list-container', menuShow === 'show' && 'show', menuShow === 'hide' && 'hide')}
         id="nav-list-container"
+        ref={navListContainer}
       >
         <ul className="nav-list">
           {menuList.map((item) => {
             return (
-              <li className="nav-list-item" key={item.id}>
+              <li className="nav-list-item" key={item.id} ref={navListItem}>
                 <a href={item.href}>{item.title}</a>
               </li>
             );

@@ -12,6 +12,19 @@ import { faBasketball } from '@fortawesome/free-solid-svg-icons';
 
 function Footer() {
   const hashtag = '#';
+  const iconList = [
+    { id: 1, icon: faFacebook, href: 'https://www.facebook.com/cmcgloballtd' },
+    { id: 2, icon: faTwitter, href: 'https://twitter.com/CMCGLOBAL_VN' },
+    { id: 3, icon: faBasketball, href: hashtag },
+    {
+      id: 4,
+      icon: faLinkedin,
+      href: 'https://www.linkedin.com/company/cmc-global-company-limited/?originalSubdomain=vn',
+    },
+    { id: 5, icon: faGooglePlus, href: hashtag },
+    { id: 6, icon: faSquareInstagram, href: hashtag },
+    { id: 7, icon: faTumblr, href: hashtag },
+  ];
   return (
     <footer>
       <div className="footer-container">
@@ -21,27 +34,13 @@ function Footer() {
           </div>
         </a>
         <div className="footer-icon-box">
-          <a href="https://www.facebook.com/cmctssgvn/">
-            <FontAwesomeIcon icon={faFacebook} className="icon" size="lg" />
-          </a>
-          <a href={hashtag}>
-            <FontAwesomeIcon icon={faTwitter} className="icon" size="lg" />
-          </a>
-          <a href={hashtag}>
-            <FontAwesomeIcon icon={faBasketball} className="icon" size="lg" />
-          </a>
-          <a href={hashtag}>
-            <FontAwesomeIcon icon={faLinkedin} className="icon" size="lg" />
-          </a>
-          <a href={hashtag}>
-            <FontAwesomeIcon icon={faGooglePlus} className="icon" size="lg" />
-          </a>
-          <a href={hashtag}>
-            <FontAwesomeIcon icon={faSquareInstagram} className="icon" size="lg" />
-          </a>
-          <a href={hashtag}>
-            <FontAwesomeIcon icon={faTumblr} className="icon" size="lg" />
-          </a>
+          {iconList.map((item) => {
+            return (
+              <a href={item.href} key={item.id} target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={item.icon} className="icon" size="lg" />
+              </a>
+            );
+          })}
         </div>
         <p>Novanoid © 2014</p>
       </div>

@@ -30,3 +30,10 @@ export function useIsVisible(ref) {
 
   return isIntersecting;
 }
+
+export function scrollChange(y, ref, style) {
+  let scrollTop = window.pageYOffset;
+  if (scrollTop >= y) {
+    ref.current.style = style;
+  }
+}
