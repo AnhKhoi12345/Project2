@@ -1,6 +1,7 @@
 import './Header.scss';
 import Navbar from '../Navbar';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
+import { useLayoutEffect } from 'react';
 
 function Header() {
   const sliderButton = [
@@ -93,7 +94,8 @@ function Header() {
     }
     setTimeout(titleAutoChange, 7000);
   };
-  useEffect(() => {
+
+  useLayoutEffect(() => {
     titleAutoChange();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

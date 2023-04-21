@@ -5,3 +5,13 @@
   text-align: center;
   flex-direction: column;
 }
+@media only screen and (min-width: 767px) {
+  .stats-container {
+    margin-top: 10px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-direction: row;
+    /* border: 1px solid black; */
+  }
+}

@@ -36,17 +36,10 @@ function MenuButton() {
   ];
   function navbarScroll() {
     let scrollTop = window.pageYOffset;
-    // let navFlexItem = document.getElementsByClassName('nav-flex-item');
     if (scrollTop >= 550) {
-      // for (let i = 0; i < navFlexItem.length; i++) {
-      //   navFlexItem[i].classList.add('navBtnGray');
-      // }
       menuIcon.current.style = greyButton;
       navListContainer.current.style = whiteNavbar;
     } else {
-      // for (let i = 0; i < navFlexItem.length; i++) {
-      //   navFlexItem[i].classList.remove('navBtnGray');
-      // }
       navListContainer.current.style = menuIcon.current.style = '';
     }
   }

@@ -8,7 +8,7 @@
   align-items: center;
   z-index: 1;
   .nav-logo {
-    background: url(http://demo.rommar.in.ua/novanoid/novanoid-1/img/logo-dark.png) no-repeat;
+    background: url(http://demo.rommar.in.ua/novanoid/novanoid-1/img/logo-light.png) no-repeat;
     width: 80px;
     height: 27px;
     margin-left: 15px;
@@ -24,8 +24,11 @@
     .nav-flex-item {
       .nav-option {
         text-decoration: none;
-        color: white !important;
+        color: white;
       }
+      // .nav-option:hover {
+      //   color: var(--darker-aquamarine);
+      // }
     }
   }
   .show {
@@ -81,6 +84,24 @@
     width: 720px;
     .nav-flex {
       display: flex;
+    }
+  }
+}
+@media only screen and (min-width: 987px) and (max-width: 1200px) {
+  .nav-bar {
+    width: 930px;
+    .nav-flex {
+      display: flex;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .nav-bar {
+    width: 1140px;
+    .nav-flex {
+      display: flex;
+      width: 45%;
+      margin-right: 60px;
     }
   }
 }

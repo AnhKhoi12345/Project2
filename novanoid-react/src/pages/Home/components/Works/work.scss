@@ -96,3 +96,92 @@
     }
   }
 }
+@media only screen and (min-width: 460px) {
+  .work-container {
+    .work-category {
+      margin: 0 auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 300px;
+      li:nth-child(1) button {
+        width: 40px;
+        /* color: red ; */
+        /* background-color: red; */
+      }
+
+      li:nth-child(2) button {
+        width: 50px;
+      }
+      li:nth-child(3) button {
+        width: 40px;
+      }
+      li:nth-child(4) button {
+        width: 70px;
+      }
+      li:nth-child(5) button {
+        width: 60px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 670px) and (max-width: 767px) {
+  .work-container {
+    .work-collection {
+      grid-template-columns: 225px 225px;
+      grid-template-rows: 190px 190px 190px 190px 190px;
+      row-gap: 30px;
+      column-gap: 30px;
+      padding-left: 60px;
+    }
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 987px) {
+  .work-container {
+    .work-collection {
+      grid-template-columns: 225px 225px;
+      grid-template-rows: 190px 190px 190px 190px 190px;
+      row-gap: 30px;
+      column-gap: 30px;
+      padding-left: 60px;
+      margin-left: 70px;
+    }
+  }
+}
+@media only screen and (min-width: 987px) and (max-width: 1200px) {
+  .work-container {
+    .work-collection {
+      grid-template-columns: 225px 225px 225px;
+      grid-template-rows: 190px 190px 190px;
+      row-gap: 20px;
+      column-gap: 20px;
+      padding-left: 60px;
+      margin-left: 50px;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .work-container {
+    .work-collection {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      justify-content: space-evenly;
+      overflow: hidden;
+      width: 100%;
+      li:nth-child(3),
+      li:nth-child(1),
+      li:nth-child(7),
+      li:nth-child(11),
+      li:nth-child(15),
+      li:nth-child(17) {
+        width: 225px;
+      }
+      li:nth-child(5),
+      li:nth-child(9),
+      li:nth-child(13) {
+        width: 490px;
+      }
+    }
+  }
+}

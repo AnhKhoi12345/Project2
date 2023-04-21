@@ -49,7 +49,7 @@ function Blog() {
   ];
   return (
     <div id="blog" className="blog-container">
-      <h2>HOW MANY</h2>
+      <h2>OUR BLOG</h2>
       <hr />
       <p className="blog-outer-info">Praesent lacinia sem sed risus consectetur, et volutpat nulla bibendum.</p>
       <div className="blog-grid">

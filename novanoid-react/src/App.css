@@ -14,3 +14,30 @@
 .noPadBody {
   padding-top: 0 !important;
 }
+@media only screen and (min-width: 767px) and (max-width: 987px) {
+  .page {
+    width: 720px;
+  }
+}
+@media only screen and (min-width: 987px) and (max-width: 1200px) {
+  .page {
+    margin: 0 auto;
+    width: 930px;
+    height: auto;
+    padding-bottom: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .page {
+    margin: 0 auto;
+    width: 1140px;
+    height: auto;
+    padding-bottom: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
